@@ -1,0 +1,292 @@
+/* ===== MAIN ===== */
+.mainContainer {
+  background-color: #020617; /* fundo preto */
+  color: #ffffff;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: #0f172a; /* azul escuro */
+  border-bottom: 1px solid #38bdf8; /* linha sutil azul */
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logoGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoBadge {
+  background: #38bdf8; /* azul */
+  color: #020617;      /* preto para contraste */
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 900;
+}
+
+.logoTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.logoTitle span {
+  color: #38bdf8; /* azul */
+}
+
+/* ===== NAV ===== */
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav a:hover {
+  color: #38bdf8; /* azul */
+  transform: translateY(-2px);
+}
+
+/* ===== HERO ===== */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 6rem 2rem;
+  background: #020617; /* preto */
+}
+
+.badge {
+  background: rgba(56, 189, 248, 0.2); /* azul translúcido */
+  color: #38bdf8;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.title {
+  font-size: 3.5rem;
+  margin: 20px 0;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+.title span {
+  color: #38bdf8; /* azul */
+}
+
+.subtitle {
+  color: #cbd5f5; /* azul claro */
+  margin-bottom: 2rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.primaryBtn {
+  background: #38bdf8; /* azul */
+  color: #020617;      /* preto */
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.secondaryBtn {
+  background: #0f172a; /* azul escuro */
+  color: #38bdf8;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 2px solid #38bdf8;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ===== SECTION TITLES ===== */
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* ===== STACK ===== */
+.stack {
+  background: #0f172a; /* azul escuro */
+  padding: 4rem 2rem;
+}
+
+.stackGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.stackCard {
+  background: #020617; /* preto */
+  border: 1px solid #38bdf8; /* azul */
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.stackCard span {
+  font-size: 0.95rem;
+  color: #38bdf8;
+}
+
+.stackCard:hover {
+  transform: translateY(-6px);
+  border-color: #0ea5e9;
+}
+
+/* ===== PROJECTS ===== */
+.projects {
+  background: #020617; /* preto */
+  padding: 4rem 2rem;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* sempre 2 por linha */
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Responsivo: 1 card por linha em telas pequenas */
+@media (max-width: 768px) {
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.projectCard {
+  background: #0f172a; /* azul escuro */
+  border: 1px solid #38bdf8;
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.projectCard h4 {
+  font-size: 1.3rem;
+  color: #ffffff;
+}
+
+.projectCard p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #cbd5f5;
+}
+
+.projectCard ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.projectCard li {
+  list-style: none;
+  background: #020617;
+  color: #38bdf8;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+
+.projectLinks {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.projectLinks a {
+  text-decoration: none;
+  font-size: 0.85rem;
+  color: #020617;
+  background: #38bdf8;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.projectLinks a:hover {
+  background: #0ea5e9;
+}
+
+.projectCard:hover {
+  transform: translateY(-6px);
+  border-color: #0ea5e9;
+}
+
+/* ===== CONTACT ===== */
+.contact {
+  background: #0f172a; /* azul escuro */
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.contact p {
+  max-width: 500px;
+  margin: 0 auto 2rem;
+  color: #cbd5f5;
+  font-size: 1rem;
+}
+
+.contactLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.contactLinks a {
+  text-decoration: none;
+  color: #020617;
+  background: #38bdf8;
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contactLinks a:hover {
+  background: #0ea5e9;
+  transform: translateY(-4px);
+}
