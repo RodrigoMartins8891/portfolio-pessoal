@@ -1,22 +1,20 @@
+import type { Metadata } from "next";
+import React from 'react';
+import "./globals.css";
+
+export const metadata: Metadata = {
+  title: "Rodrigo | Desenvolvedor Full Stack",
+  description: "Portfólio de Rodrigo, Desenvolvedor Full Stack Júnior.",
+};
+
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="pt-br">
-      <body>
-        {/* O children é onde o conteúdo da sua page.tsx será renderizado */}
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
-  )
+  );
 }
-
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Rodrigo | Desenvolvedor Full Stack',
-  description:
-    'Portfólio de Rodrigo, Desenvolvedor Full Stack com foco em React, Node.js, APIs REST e bancos de dados SQL.',
-};
